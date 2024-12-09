@@ -121,8 +121,8 @@ type: ``bool``
 
 The admin is allowed to set the description of tokens via the endpoint `/token/descriptipon`.
 
-.. note:: That an admin can also be allowed to the the description of a token by granting the
-   aforementioned policy `set`.
+.. note:: An admin can also be allowed to set the description of a token by
+   granting the aforementioned policy `set`.
 
 setpin
 ~~~~~~
@@ -313,7 +313,8 @@ allowed to import token seeds from a token file, thus
 creating many new token objects in the systems database.
 
 The right to upload tokens can be limited to certain realms.
-Thus the administrator could only upload tokens into realm he is allowed to manage.
+Thus the administrator could only upload tokens into realm they are allowed to
+manage.
 
 delete
 ~~~~~~
@@ -355,7 +356,7 @@ type: ``bool``
 If the ``userlist`` action is defined, the administrator is
 allowed to view the user list in a realm.
 An administrator might not be allowed to list the users, if
-he should only work with tokens, but not see all users at once.
+they should only work with tokens, but not see all users at once.
 
 .. note:: If an administrator has any right in a realm, the administrator
    is also allowed to view the token list.
@@ -753,7 +754,7 @@ The administrator is allowed to download the audit log.
 .. note:: The download is **not** restricted to filters, hidden columns and audit age.
    Thus, if you want to avoid that an administrator can see older
    logs or columns, hidden by `hide_audit_columns`, you need to disallow downloading the data.
-   Otherwise he may download the audit log and look at older entries manually.
+   Otherwise they may download the audit log and look at older entries manually.
 
 auditlog_age
 ~~~~~~~~~~~~

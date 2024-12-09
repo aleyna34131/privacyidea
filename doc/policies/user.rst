@@ -28,7 +28,7 @@ Technically user policies control the use of the REST API
 :ref:`policy_decorators`.
 
 .. note:: If no user policy is defined, the user has
-   all actions available to him, to manage his tokens.
+   all actions available to them to manage their tokens.
 
 The following actions are available in the scope
 *user*:
@@ -55,7 +55,7 @@ disable
 
 type: ``bool``
 
-The user is allowed to disable his own tokens.
+The user is allowed to disable their own tokens.
 Disabled tokens can not be used to authenticate.
 
 enable
@@ -63,14 +63,14 @@ enable
 
 type: ``bool``
 
-The user is allowed to enable his own tokens.
+The user is allowed to enable their own tokens.
 
 delete
 ~~~~~~
 
 type: ``bool``
 
-The user is allowed to delete his own tokens from the database.
+The user is allowed to delete their own tokens from the database.
 Those tokens can not be recovered. The audit log concerning
 these tokens remains.
 
@@ -79,7 +79,7 @@ unassign
 
 type: ``bool``
 
-The user is allowed to drop his ownership of the token.
+The user is allowed to drop their ownership of the token.
 The token does not belong to any user anymore and can be
 reassigned.
 
@@ -103,7 +103,7 @@ setpin
 
 type: ``bool``
 
-The user is allowed to set the OTP PIN for his tokens.
+The user is allowed to set the OTP PIN for their tokens.
 
 setrandompin
 ~~~~~~~~~~~~
@@ -119,7 +119,7 @@ setdescription
 
 type: ``bool``
 
-The user is allowed to set the description of his tokens.
+The user is allowed to set the description of their tokens.
 
 enrollpin
 ~~~~~~~~~
@@ -178,7 +178,7 @@ contents: cns
 This defines what characters an OTP PIN should contain when the user
 sets it.
 
-This takes the same values like the admin policy :ref:`admin_policies_otp_pin_contents`.
+This takes the same values as the admin policy :ref:`admin_policies_otp_pin_contents`.
 
 otp_pin_set_random
 ~~~~~~~~~~~~~~~~~~
@@ -193,7 +193,7 @@ auditlog
 type: ``bool``
 
 This action allows the user to view and search the audit log
-for actions with his own tokens.
+for actions with their own tokens.
 
 To learn more about the audit log, see :ref:`audit`.
 
@@ -203,7 +203,7 @@ auditlog_age
 type: ``string``
 
 This limits the maximum age of displayed audit entries. Older entries are not
-remove from the audit table but the user is simply not allowed to
+removed from the audit table but the user is simply not allowed to
 view older entries.
 
 Can be something like 10m (10 minutes), 10h (10 hours) or 10d (ten days).
@@ -227,7 +227,7 @@ updateuser
 
 type: ``bool``
 
-If the ``updateuser`` action is defined, the user is allowed to change his
+If the ``updateuser`` action is defined, the user is allowed to change their
 attributes in the user store.
 
 .. note:: To be able to edit the attributes, the resolver must be defined as
@@ -239,7 +239,7 @@ userlist
 type: ``bool``
 
 If the ``userlist`` action is defined, the user is
-allowed to view his own user information.
+allowed to view their own user information.
 
 revoke
 ~~~~~~
@@ -282,7 +282,7 @@ needs to enter. (see :ref:`2step_enrollment`).
 Possible values are *allow* and *force*.
 This works in conjunction with the enrollment parameters :ref:`2step_parameters`.
 
-Such a policy can also be set for the administrator. See :ref:`admin_policy_2step`.
+Such a policy can also be set for the administrator. See :ref:`admin_policies_2step`.
 
 .. note:: This does not work in combination with the enrollment policy :ref:`policy_verify_enrollment`, since
    the usage of 2step already ensures that the user has successfully scanned the QR code.
@@ -384,7 +384,7 @@ set_custom_user_attributes
 
 type: ``string``
 
-This defines how a user is allowed to set his own attributes.
+This defines how a user is allowed to set their own attributes.
 It uses the same setting as the admin policy :ref:`admin_set_custom_user_attributes`.
 
 .. note:: Using a '*' in this setting allows the user to set any attribute or any value and thus the user
@@ -401,7 +401,7 @@ delete_custom_user_attributes
 
 type: ``string``
 
-This defines how a user is allowed to delete his own attributes.
+This defines how a user is allowed to delete their own attributes.
 It uses the same setting as the admin policy :ref:`admin_delete_custom_user_attributes`.
 
 .. note:: Using a '*' in this setting allows the user to delete any attribute and thus the user

@@ -69,7 +69,7 @@ Each policy can contain the following attributes:
   A policy can contain several actions.
   Actions can be of type `boolean`, `string` or `integer`.
   Boolean actions are enabled by just adding this action - like
-  ``scope=user:action=disable``, which allows the user to disable his own
+  ``scope=user:action=disable``, which allows the user to disable their own
   tokens.
   `string` and `integer` actions require an additional value - like
   ``scope=authentication:action='otppin=userstore'``.

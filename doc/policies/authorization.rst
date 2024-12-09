@@ -6,7 +6,7 @@ Authorization policies
 .. index:: authorization policies
 
 The scope *authorization* provides means to define
-what should happen if a user proved his identity
+what should happen if a user proved their identity
 and authenticated successfully.
 
 Authorization policies take the realm, the user
@@ -136,10 +136,9 @@ This policy is checked before the user authenticates.
 The realm of the user matching this policy will be set to
 the realm in this action.
 
-.. note:: This can be used if the user can not pass his
-   realm when authenticating at a certain client, but
-   the realm needs to be available during authentication
-   since the user is not located in the default realm.
+.. note:: This can be used if the user can not pass their realm when
+   authenticating at a certain client, but the realm needs to be available
+   during authentication since the user is not located in the default realm.
 
 .. _policy_no_detail_on_success:
 

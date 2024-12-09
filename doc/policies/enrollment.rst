@@ -124,7 +124,7 @@ allowed values: ``any_pin``, ``userstore``
 Users can assign a token just by using that token. The user can take
 a token from a pool of unassigned tokens. When this policy is set,
 and the user has no token assigned, autoassignment will be done:
-The user authenticates with a new PIN or his userstore password and an OTP
+The user authenticates with a new PIN or their userstore password and an OTP
 value from the token.
 If the OTP value is correct the token gets assigned to the user and the given
 PIN is set as the OTP PIN.
@@ -137,7 +137,7 @@ PIN is set as the OTP PIN.
   4. (The user needs to enter the correct userstore password)
 
 .. warning:: If you set the policy to *any_pin* the token will be assigned to
-   the user no matter what pin he enters.
+   the user no matter what pin they enter.
    In this case assigning the token is only a
    one-factor-authentication: the possession of the token.
 
@@ -188,7 +188,7 @@ trigger the change of the PIN using the API */token/setpin*. See
 :ref:`rest_token`.
 
 .. note:: If the application does not honour the "pin_change" attribute, then
-   the user can still authenticate with his old PIN.
+   the user can still authenticate with their old PIN.
 
 .. note:: Starting with version 3.4 privacyIDEA also allows to force the user to change
    the PIN in such a case using the policy :ref:`policy_change_pin_via_validate`.
@@ -201,7 +201,7 @@ change_pin_every
 
 type: ``string``
 
-This policy requires the user to change the PIN of his token on a regular
+This policy requires the user to change the PIN of their token on a regular
 basis. Enter a value followed by "d", e.g. change the PIN every 180 days will
 be "180d".
 
@@ -235,7 +235,7 @@ contents: cns
 
 This defines what characters the registrationcodes should contain.
 
-This takes the same values like the admin policy :ref:`admin_policies_otp_pin_contents`.
+This takes the same values as the admin policy :ref:`admin_policies_otp_pin_contents`.
 
 pw.length
 ~~~~~~~~~
@@ -257,7 +257,7 @@ contents: cns
 
 This is the content of an automatically generated password of a password token (pw token).
 
-This takes the same values like the admin policy :ref:`admin_policies_otp_pin_contents`.
+This takes the same values as the admin policy :ref:`admin_policies_otp_pin_contents`.
 
 losttoken_PW_length
 ~~~~~~~~~~~~~~~~~~~
@@ -477,7 +477,7 @@ successfully enrolled the token.
 As long as no OTP value is provided by the user during the enrollment process, the
 token can not be used for authentication.
 
-.. note:: This does not work in combination with the admin policy :ref:`admin_policy_2step` and
+.. note:: This does not work in combination with the admin policy :ref:`admin_policies_2step` and
   the user policy :ref:`user_policy_2step`.
 
 .. _policy_webauthn_enroll_relying_party_id:
@@ -537,7 +537,7 @@ webauthn_timeout
 
 type: ``int``
 
-This action sets the time in seconds the user has to confirm enrollment on his
+This action sets the time in seconds the user has to confirm enrollment on their
 WebAuthn authenticator.
 
 This is a client-side setting, that governs how long the client waits for the
@@ -742,8 +742,8 @@ webauthn_challenge_text
 
 type: ``string``
 
-Use an alternate challenge text for requesting the user to confirm with
-his WebAuthn token during enrollment. This might be different from the
+Use an alternate challenge text when requesting the user to confirm with
+their WebAuthn token during enrollment. This might be different from the
 challenge text received during authentication
 (see :ref:`policy_webauthn_challenge_text_auth`).
 
